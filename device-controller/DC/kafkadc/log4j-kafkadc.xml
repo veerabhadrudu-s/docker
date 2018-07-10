@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="true" reset="true">
+
+	<!-- Appenders -->
+
+	<appender name="KAFKA_DC" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="${jboss.server.log.dir}/kafkadc.log" />
+		<param name="append" value="true" />
+		<param name="maxFileSize" value="5MB" />
+		<param name="maxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<!--<param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n"/> -->
+			<param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} %-5p [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+
+	<!-- Application Loggers -->
+	<logger name="com.hpe">
+		<level value="TRACE" />
+	</logger>
+
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="org.apache.activemq">
+		<level value="WARN" />
+	</logger>
+
+	<logger name="org.apache">
+		<level value="WARN" />
+	</logger>
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="WARN" />
+		<appender-ref ref="KAFKA_DC" />
+	</root>
+
+</log4j:configuration>

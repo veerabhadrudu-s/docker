@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<devicemodels>
+	<devicemodel>
+		<manufacturer>Trackimo</manufacturer>
+		<modelId>TRKM002</modelId>
+		<version>1.0</version>
+		<deviceIdJsonPath>$.device_id</deviceIdJsonPath>
+		<messageTypeJsonPath>$.alarm_type</messageTypeJsonPath>
+	</devicemodel>
+	<devicemodel>
+		<manufacturer>Sample</manufacturer>
+		<modelId>SampleModel</modelId>
+		<version>1.0</version>
+		<deviceIdJsonPath>$.sample_id</deviceIdJsonPath>
+		<messageTypeJsonPath>$.message_type</messageTypeJsonPath>
+	</devicemodel>
+	<devicemodel>
+		<manufacturer>rexaware</manufacturer>
+		<modelId>bikeevent</modelId>
+		<version>1.0</version>
+		<deviceIdJsonPath>$.DeviceData[0].DeviceID</deviceIdJsonPath>
+		<messageTypeJsonPath></messageTypeJsonPath>
+	</devicemodel>
+	<devicemodel>
+		<manufacturer>mmi</manufacturer>
+		<modelId>streetlighting</modelId>
+		<version>1.0</version>
+		<deviceIdJsonPath>$.mmi_eventdetail[0].uniqueId</deviceIdJsonPath>
+		<messageTypeJsonPath></messageTypeJsonPath>
+	</devicemodel>
+	<devicemodel>
+		<manufacturer>mmi</manufacturer>
+		<modelId>wastemanagement</modelId>
+		<version>1.0</version>
+		<deviceIdJsonPath>$.mmi_eventdetail[0].uniqueId</deviceIdJsonPath>
+		<messageTypeJsonPath></messageTypeJsonPath>
+	</devicemodel>	
+</devicemodels>
