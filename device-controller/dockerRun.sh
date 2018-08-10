@@ -13,7 +13,6 @@ else
 	exit 0
 fi
 
-echo pwd
 cp ~/.m2/repository/com/hpe/iot/dc/device-controllers-ear/0.0.1-SNAPSHOT/device-controllers-ear-0.0.1-SNAPSHOT.ear .
 mv device-controllers-ear-0.0.1-SNAPSHOT.ear device-controllers-ear.ear
 docker build -t veerabhadrudu/device-controller:latest -f DockerFile .
