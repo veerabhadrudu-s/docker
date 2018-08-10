@@ -29,12 +29,12 @@ public class MMIVT15ServerSocketToDeviceModel extends AbstractServerSocketToDevi
 
 	@Override
 	public String getBoundLocalAddress() {
-		return "10.3.239.75";
+		return "0.0.0.0";
 	}
 
 	@Override
 	public int getPortNumber() {
-		return 3005;
+		return 2004;
 	}
 
 	@Override

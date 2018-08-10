@@ -56,11 +56,11 @@ public class MMIServerSocketToDeviceModel extends AbstractServerSocketToDeviceMo
 	}
 
 	public String getBoundLocalAddress(){
-		return "10.3.239.75";
+		return "0.0.0.0";
 	}
 
 	public int getPortNumber(){
-		return 3002;
+		return 2002;
 	}
 
 	public String getDescription() {

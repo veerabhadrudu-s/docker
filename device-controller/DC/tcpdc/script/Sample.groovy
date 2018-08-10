@@ -47,12 +47,12 @@ class SampleServerSocketToDeviceModel  extends AbstractServerSocketToDeviceModel
 
 	@Override
 	public String getBoundLocalAddress() {
-		return "10.3.239.75";
+		return "0.0.0.0";
 	}
 
 	@Override
 	public int getPortNumber() {
-		return 2006;
+		return 2001;
 	}
 
 	@Override

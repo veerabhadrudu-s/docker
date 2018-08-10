@@ -59,11 +59,11 @@ public class MMIDrivemateServerSocketToDeviceModel implements ServerSocketToDevi
 	}
 
 	public String getBoundLocalAddress(){
-		return "10.3.239.75";
+		return "0.0.0.0";
 	}
 
 	public int getPortNumber(){
-		return 3004;
+		return 2003;
 	}
 
 	public String getDescription() {
