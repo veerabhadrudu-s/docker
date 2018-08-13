@@ -1,6 +1,7 @@
 FROM jboss/wildfly
 
-RUN  /opt/jboss/wildfly/bin/add-user.sh admin password --silent
+RUN  /opt/jboss/wildfly/bin/add-user.sh admin password --silent && \
+sed -i -e 's\jndi-name="java:jboss/ee/concurrency/executor/default" context-service="default" hung-task-threshold="60000" keepalive-time="5000"\jndi-name="java:jboss/ee/concurrency/executor/default" context-service="default" hung-task-threshold="60000" keepalive-time="5000" core-threads="50" max-threads="1000" \g' /opt/jboss/wildfly/standalone/configuration/standalone.xml
 ADD  DC/ /opt/jboss/wildfly/standalone/configuration/DC/
 ADD  device-controllers-ear.ear /opt/jboss/wildfly/standalone/deployments/
 
