@@ -1,10 +1,7 @@
-PreRequisites:-
-
--> Make sure ear is available in user home .m2 directory (or) local repository.
 
 Run Docker Build Script:-
 
-$ ./dockerRun.sh
+$ ./dockerRun.sh <root path of device controller project directory>
 
 Run Docker run command:-
 
