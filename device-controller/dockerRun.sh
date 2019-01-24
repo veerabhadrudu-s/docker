@@ -1,11 +1,11 @@
 #!/bin/bash
-#This shell script will try to build device controller project and create docker image using it.
+#This shell script will try to build device controller project and create docker image out of it.
 
 USAGE="Usage:$0 <device controller project root directory>";
 DOCKER_IMAGE_NAME="device-controller";
+[[ -z "$1" || ! -d "$1"  ]] && { echo $USAGE && exit 1;};
 read  -p "Enter your docker account name: " DOCKER_ACT && \
 read -p "Enter your docker account password: " -s DOCKER_ACT_PASSWD;
-[[ -z "$1" || ! -d "$1"  ]] && { echo $USAGE && exit 1;};
 #{ (cd "$1" && mvn clean install >/dev/null;) || { echo "Failed to execute maven build"; exit 2; } ; } && \
 { (cd "$1" && mvn clean install ) || { echo "Failed to execute maven build"; exit 2; } ; } && \
 cp "${1}device-controllers-ear/target/device-controllers-ear.ear" . && \
