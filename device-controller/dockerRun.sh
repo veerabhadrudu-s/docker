@@ -12,5 +12,5 @@ cp "${1}device-controllers-ear/target/device-controllers-ear.ear" . && \
 { docker build -t "$DOCKER_ACT/$DOCKER_IMAGE_NAME:latest" -f DockerFile . || { echo "$?"; echo "Failed to build docker image"; exit 3; } ; } && \
 { docker login -u "$DOCKER_ACT" -p "$DOCKER_ACT_PASSWD" || { echo "Failed to login to docker hub account.Please check your docker hub credentials."; exit 4; } ; } && \
 { docker push "$DOCKER_ACT/$DOCKER_IMAGE_NAME" || { echo "Failed to push docker image to docker hub cloud"; docker logout; exit 5; } ; } && \
-echo "Sucessfully uploaded docker image to docker hub" && exit;
+docker logout && echo "Sucessfully uploaded docker image to docker hub" && exit;
 
